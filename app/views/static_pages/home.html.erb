@@ -2,6 +2,7 @@
 
 <% if current_user %>
 	<h1>Hello, <%= current_user.name %></h1>
+  <%= image_tag(current_user.facebook_image_url, alt: "Foto de perfil", class: "img-thumbnail") %>
 <% else %>
 	
 	<div class="row">

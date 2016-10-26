@@ -11,6 +11,7 @@ class User < ApplicationRecord
          		user.uid = auth.uid
          		user.name = auth.info.name
          		user.email = auth.info.email
+            user.facebook_image_url = auth.info.image
          		user.password = Devise.friendly_token[0,20]
          	end
          end
