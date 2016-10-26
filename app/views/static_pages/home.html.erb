@@ -1,2 +1,18 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Example Omniauth-facebook</h1>
+
+<% if current_user %>
+	<h1>Hello, <%= current_user.name %></h1>
+<% else %>
+	
+	<div class="row">
+    	<h3>Please log in to see the app</h3>
+    	<hr>
+        <div class="col-lg-4 col-lg-offset-4 ">
+          <a href="/users/auth/facebook" class="btn btn-block btn-social btn-facebook">
+            <span class="fa fa-facebook"></span>
+            Registrate ahora usando Facebook
+          </a>
+        </div>
+  	</div>
+
+<% end %>
